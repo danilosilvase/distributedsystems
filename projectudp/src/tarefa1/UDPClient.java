@@ -1,4 +1,4 @@
-package exercicio1;
+package tarefa1;
 
 import java.io.*;
 import java.net.*;
