@@ -29,26 +29,28 @@ class UDPServer {
 			DatagramPacket receivePacket = new DatagramPacket(receiveData,
 					receiveData.length);
 			System.out.println("Esperando por datagrama UDP na porta " + porta);
+			
 			serverSocket.receive(receivePacket);
+			
 			System.out.print("Datagrama UDP [" + numConn + "] recebido...");
  
 			String sentence = new String(receivePacket.getData());
 			System.out.println(sentence);
 			
-			InetAddress IPAddress = receivePacket.getAddress();
+			//InetAddress IPAddress = receivePacket.getAddress();
  
-			int port = receivePacket.getPort();
+			//int port = receivePacket.getPort();
  
-			String capitalizedSentence = sentence.toUpperCase();
+			//String capitalizedSentence = sentence.toUpperCase();
  
-			sendData = capitalizedSentence.getBytes();
+			//sendData = capitalizedSentence.getBytes();
  
-			DatagramPacket sendPacket = new DatagramPacket(sendData,
-					sendData.length, IPAddress, port);
+			//DatagramPacket sendPacket = new DatagramPacket(sendData,
+				//	sendData.length, IPAddress, port);
 			
-			System.out.print("Enviando " + capitalizedSentence + "...");
+			//System.out.print("Enviando " + capitalizedSentence + "...");
  
-			serverSocket.send(sendPacket);
+			//serverSocket.send(sendPacket);
 			System.out.println("OK\n");
 		}
 	}
